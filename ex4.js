@@ -1,33 +1,36 @@
-class Temperatura{
+class Temperatura {
     #celsius;
 
-    constructor(celsius){
-        this.#celsius = celsius
+    constructor(celsius) {
+        this.#celsius = celsius;
     }
 
-    get celsius(){
-        return(this.#celsius)
-    }
-    
-    set celsius(valor){
-        this.#celsius = valor
+    get celsius() {
+        return this.#celsius;
     }
 
-    get fahrenheit(){
-        return (this.celsius*9/5) + 32;
+    set celsius(valor) {
+        this.#celsius = valor;
     }
 
-    get kelvin(){
-        return celsius = this.celsius + 273,15
+    get fahrenheit() {
+        return (this.#celsius * 9 / 5) + 32;
     }
 
-    set fahrenheit(valor){
-        this.#celsius = (valor - 32) * 5/9
+    set fahrenheit(valor) {
+        this.#celsius = (valor - 32) * 5 / 9;
     }
 
-    set kelvin(valor){
-        this.#celsius = valor - 273,15;
+    get kelvin() {
+        return this.#celsius + 273.15;
     }
 
-    
+    set kelvin(valor) {
+        this.#celsius = valor - 273.15;
+    }
 }
+
+const temp = new Temperatura(25);
+
+console.log(temp.fahrenheit);
+console.log(temp.kelvin);
