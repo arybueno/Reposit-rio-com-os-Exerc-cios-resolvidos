@@ -1,4 +1,3 @@
-```javascript
 class Veiculo {
     constructor(marca, modelo) {
         this.marca = marca;
@@ -46,4 +45,3 @@ carro.acelerar();
 
 console.log("Velocidade:", carro.velocidade);
 console.log("Bateria:", carro.bateria);
-```
